@@ -29,12 +29,59 @@ function generateMarkdown(data, githubInfo) {
   - [Installation](#Installation)
   - [Usage](#Usage)
   - [Code Snippet](#CodeSnippet)
-  - [Preview]()
+  - [Preview](#Preview)
   - [License](#License)
-  - [Contributors](#Contributors)
   - [Test](#Test)
+  - [Contributors](#Contributors)
   - [Repository Link](#Repository)
   - [GitHub Info](#GitHub)
+
+  ## Story
+
+  ${data.story}
+
+  ## Tools
+
+  ${data.tools}
+
+  ## Installation
+
+  ${data.installation}
+
+  ## Usage
+
+  ${data.usage}
+
+  ## Code Snippet
+
+  ${data.codeSnippet}
+
+  ## Preview
+
+  ${data.preview}
+
+  ## License
+
+  ${data.license}
+
+  ## Test
+
+  ${data.test}
+
+  ## Contributors
+
+  ${data.contributors}
+
+  ## Repository
+
+  -[Project Repositor](${data.repo})
+
+  ## GitHub
+
+  ![My Photo](${githubInfo.githubImage})
+  - ${githubInfo.name}
+  -[My GitHub Profile](${githubInfo.profile})
+  - <${githubInfo.email}>
 
 `;
 }
