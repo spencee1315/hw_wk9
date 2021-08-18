@@ -24,10 +24,6 @@ const questions = [
      message: "Please include any resources used in the building of the application (ex. Bootstrap)"
     },
     {type: "input",
-     name: "deployedLink",
-     message: "Add your deployed link."
-    },
-    {type: "input",
      name: "installation",
      message: "Please provide any installation instructions."
     },
@@ -90,7 +86,7 @@ inquirer
 
 // TODO: Create a function to initialize app
 function init() {
-    
+
 }
 
 // Function call to initialize app
