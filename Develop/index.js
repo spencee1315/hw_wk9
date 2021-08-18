@@ -16,14 +16,6 @@ const questions = [
      message: "Provide a short description explaining the what, why and how of your application."
     },
     {type: "input",
-     name: "story",
-     message: "What is your user story?"
-    },
-    {type: "input",
-     name: "tools",
-     message: "Please include any resources used in the building of the application (ex. Bootstrap)"
-    },
-    {type: "input",
      name: "installation",
      message: "Please provide any installation instructions."
     },
@@ -31,14 +23,6 @@ const questions = [
      name: "usage",
      message: "Provide instructions and examples for use?"
     },
-    {type: "input",
-    name: "codeSnippet",
-    message: "Please include a snippit of code from your work."
-   },
-   {type: "input",
-    name: "preview",
-    message: "Please provide a photo of your working site."
-   },
     {type: "input",
      name: "license",
      message: "Please provide the license or badge link"
@@ -49,15 +33,15 @@ const questions = [
    },
     {type: "input",
     name: "contributing",
-    message: "Please provide any contributing parties."
+    message: "Please provide details if someone else would like to contribute to your project."
    },
+   {type: "input",
+  name: "email",
+  message: "What is your email?"
+ },
   {type: "input",
   name: "github",
   message: "What is your GitHub username?"
- },
- {type: "input",
-  name: "linkedin",
-  message: "What is your Linkedin username?"
  },
 ];
 

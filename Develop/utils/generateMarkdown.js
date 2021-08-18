@@ -24,8 +24,6 @@ function generateMarkdown(data, githubInfo) {
   ## Table of contents
 
   - [Description](#Description)
-  - [Story](#Story)
-  - [Tools](#Tools)
   - [Installation](#Installation)
   - [Usage](#Usage)
   - [Code Snippet](#CodeSnippet)
@@ -34,6 +32,7 @@ function generateMarkdown(data, githubInfo) {
   - [Test](#Test)
   - [Contributors](#Contributors)
   - [Repository Link](#Repository)
+  - [Email](#Email)
   - [GitHub Info](#GitHub)
 
   ## Story
@@ -52,14 +51,6 @@ function generateMarkdown(data, githubInfo) {
 
   ${data.usage}
 
-  ## Code Snippet
-
-  ${data.codeSnippet}
-
-  ## Preview
-
-  ${data.preview}
-
   ## License
 
   ${data.license}
@@ -76,7 +67,7 @@ function generateMarkdown(data, githubInfo) {
 
   -[Project Repositor](${data.repo})
 
-  ## GitHub
+  ## Contact
 
   ![My Photo](${githubInfo.githubImage})
   - ${githubInfo.name}
