@@ -1,71 +1,37 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
 // A function to generate markdown for README
-function generateMarkdown(data, githubInfo) {
-  return `
-  # **${data.title}**
-
-  ![License:${license}](https://img.shields.io/badge/License-${license}-blue.svg)
-
-  ${data.badge}
-
-  ## Description
-
+const generateMarkdown = data => {
+  return `# ${data.title}
+  ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
+  
+  ## Description 
   ${data.description}
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+  ## Installation 
+  ${data.install}
 
-  ## Table of contents
-
-  - [Description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [License](#License)
-  - [Contributors](#Contributors)
-  - [Test](#Test)
-  - [Repository Link](#Repository)
-  - [GitHub Info](#GitHub)
-
-  ## Installation
-
-  ${data.installation}
-
-  ## Usage
-
+  ## Usage 
   ${data.usage}
 
-  ## License
+  ## License 
+  This project is license under ${data.license}
 
-  ${data.license}
-
-  ## Contributors
-
+  ## Contributing 
   ${data.contributors}
 
-  ## Test
-
+  ## Tests
   ${data.test}
 
-  ## Repository
-
-  -[Project Repositor](${data.repo})
-
-  ## Contact Information
-
-  ![My Photo](${githubInfo.githubImage})
-  - ${githubInfo.name}
-  -[My GitHub Profile](${githubInfo.profile})
-  - <${githubInfo.email}>
-
+  ## Questions
+  If you have any questions about this projects, please contact me directly at ${data.email}. You can view more of my projects at https://github.com/${data.github}.
 `;
 }
 
+// use for importing Markdown in index 
 module.exports = generateMarkdown;
