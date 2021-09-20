@@ -118,35 +118,31 @@ const questions = () => {
 };
 
 
-// A function to write the README file
-inquirer
-    .prompt(questions)
-    .then(function(data){
-        const queryUrl = 'https://api.github.com/users/${data.username}';
-
-        axios.get(queryUrl).then(function(res){
-
-            const githubInfo = {
-                githubImage: res.data.avatar_url,
-                email: res.data.email,
-                profile: res.data.html_url,
-                name: res.data.name
-            };
-
-            fs.writeFile("README.md", generate(data, githubInfo), function(err) {
-                if (err) {
-                    throw err;
-                };
-
-                console.log("Success! Your new README file was created and is ready for your viewing.");
-            });
-        });
-    });
+// A function to write the README file using file system
+const writeFile = data => {
+    fs.writeFile('README.md', data, err => {
+        // if there is an error
+        if (err) {
+            console.log(err);
+            return;
+        // if it was successful
+        } else {
+            console.log("Your README has been successfully created!")
+        }
+    })
+};
 
 // A function to initialize app
-function init() {
-
-}
-
-// A function call to initialize app
-init();
+questions()
+// getting user answers
+.then(answers => {
+    return generatePage(answers);
+})
+// using data to display on page
+.then(data => {
+    return writeFile(data);
+})
+// catching errors
+.catch(err => {
+    console.log(err)
+})
